@@ -45,7 +45,7 @@ El proyecto implementa una arquitectura basada en un bucle de eventos centrado e
 
 ---
 
-## 📂 Estructura del Proyecto
+📂 Estructura del Proyecto
 
 La disposición de los archivos mantiene una estructura limpia, ligera y autocontenida:
 
@@ -59,6 +59,7 @@ laberintos-extremos/
 ├── requirements.txt         # Lista de dependencias (Pygame)
 ├── .gitignore               # Exclusión de archivos no deseados en Git
 └── README.md                # Documentación oficial del proyecto
+
 🛠️ Tecnologías UtilizadasComponenteTecnologíaDescripciónLenguajePython 3.xLenguaje base orientado a objetos.Motor 2DPygameLibrería multimedia para renderizado 2D, eventos de teclado y audio.MatemáticaStandard Library (math, random)Funciones trigonométricas para animaciones e I.A. con aleatoriedad.GráficosSurface / PNGRenderizado vectorial directo en GPU/CPU con soporte de transparencias.🚀 Guía de Configuración y DespliegueSigue estos pasos detallados para preparar tu entorno de desarrollo y ejecutar el juego en cualquier equipo.Paso 1: Crear el archivo de dependencias (requirements.txt)Para registrar la librería Pygame necesaria para ejecutar el proyecto, ejecuta en tu terminal:Bashpip freeze > requirements.txt
 Paso 2: Configurar la exclusión de Git (.gitignore)Para evitar subir el entorno virtual y archivos temporales de Python a GitHub:Bashecho "venv/" > .gitignore
 echo "__pycache__/" >> .gitignore
