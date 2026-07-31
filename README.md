@@ -1,4 +1,4 @@
-Markdown# 🎮 Laberintos Extremos — Arcade Retro & Motor de Videojuegos 2D
+# 🎮 Laberintos Extremos — Arcade Retro & Motor de Videojuegos 2D
 
 ¡Bienvenido al repositorio de **Laberintos Extremos**! Esta es una aplicación de videojuegos 2D desarrollada en Python con la librería Pygame. El proyecto está diseñado como una herramienta pedagógica para que los estudiantes comprendan los cimientos de la programación de videojuegos: el bucle principal (Game Loop), la gestión de estados, la física de colisiones rectangulares (AABB), el renderizado de gráficos vectoriales/sprites y sistemas de partículas.
 
