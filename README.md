@@ -8,7 +8,7 @@
 
 El proyecto implementa una arquitectura basada en un bucle de eventos centrado en una **máquina de estados finitos (FSM)** para gestionar la transición entre menús y partidas, optimizado a 60 FPS estables.
 
-```text
+`
                    +------------------------+
                    |     MENÚ PRINCIPAL     |
                    +-----------+------------+
@@ -26,8 +26,9 @@ El proyecto implementa una arquitectura basada en un bucle de eventos centrado e
             (Colisión)   |            |   (Llega a la meta)
                          v            v
                    +-----------+  +-----------+
-                   | DERROTADO |  | VICTORIA  |
+                   | DERROTADO |  | VICTORIA  | 
                    +-----------+  +-----------+
+                   
 🧠 Bucle Principal y Gestión de Estados (juego.py)Controlador de Estados: Mantiene la fluidez entre menu_principal, seleccion_mapa, jugando, derrotado y victoria.Sincronización Táctil (Clock): Uso de clock.tick(60) para garantizar un renderizado fluido e independiente de la potencia de procesamiento del CPU.👾 Objetos Dinámicos y Física (M_c, Pared, Particula)POO en Videojuegos: Implementación de herencia mediante pygame.sprite.Sprite.Motor de Colisiones: Uso de cajas envolventes AABB (Axis-Aligned Bounding Box) con sprite.collide_rect y Rect.collidepoint.I.A. Enemiga Lineal: Patrullaje de enemigos en ejes X/Y con rebote automático al alcanzar los límites del mapa (limite_min, limite_max).Efectos Visuales (Partículas & FX): Generador de partículas con desvanecimiento de canal alfa (SRCALPHA) que reaccionan al movimiento del jugador y de los enemigos.🎨 Renderizado y Componentes de Interfaz (UI)Pintado Dinámico de Grid: Creación de un fondo procedural estilo Cyberpunk/Modern Arcade.Efectos de Glow y Animación Matemática: Animación de pulsación en la celda de la Meta mediante funciones trigonométricas (math.sin(tiempo)).Botones Interactivos UI: Manejo de estados de ratón (Hover y Click) dibujando sombras y bordes dinámicos.📂 Estructura del ProyectoLa disposición de los archivos mantiene una estructura limpia, ligera y autocontenida:Plaintextlaberintos-extremos/
 │
 ├── hero.png                 # Sprite/Imagen del personaje jugable
@@ -46,3 +47,6 @@ En Windows (PowerShell):PowerShell.\venv\Scripts\Activate.ps1
 3. Instalar las dependenciasBashpip install -r requirements.txt
 4. Ejecutar el juegoBashpython juego.py
 🔄 Flujo de Trabajo DiarioAbrir la terminal en la carpeta raíz del proyecto.Activar el entorno: source venv/bin/activate (Verás el indicador (venv) al inicio).Ejecutar el videojuego: python juego.py.Salir del entorno (opcional): Escribe deactivate.📝 Guía Metodológica y Ejercicios para ClaseEste proyecto está diseñado para guiar laboratorios prácticos de lógica de programación orientada a objetos y videojuegos:💡 Laboratorio 1: Diseño Procedural y Creación de Niveles (cargar_mapa)Desafío: Pide a los estudiantes que añadan un Mapa 4. Deben instanciar nuevas estructuras de Pared y enemigos con diferentes rutas de patrullaje para entender las coordenadas $(X, Y)$ en un plano cartesiano donde $(0,0)$ es la esquina superior izquierda.💡 Laboratorio 2: Modificación de Sprites y AssetsDesafío: Modificar la carga de imágenes (PLAYER1_IMAG y PLAYER2_IMAG). Los alumnos aprenderán sobre el reescalado de imágenes con transform.scale() y la importancia de controlar las dimensiones (Rect) para evitar errores de colisión visualmente invisibles.💡 Laboratorio 3: Física y Mecánicas (Aumento de Dificultad)Desafío: Implementar un acelerador o potenciador (Power-up). Los alumnos deben crear una nueva clase Item que, al colisionar con el jugador, incremente la propiedad self.speed del personaje por un tiempo limitado.
+git add README.md
+git commit -m "Corregido formato de README.md"
+git push
